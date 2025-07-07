@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Priya - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #7F8CAA;
+      color: #333446;
+      text-align: center;
+    }
+
+    header, footer {
+      background-color: #4E6688;
+      color: white;
+      padding: 20px 0;
+    }
+
+    #animated-text {
+      font-size: 26px;
+      font-weight: bold;
+      padding-top: 10px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    section {
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.4); /* same as Projects */
+      border-radius: 15px;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 12px;
+    }
+
+    ul, ol {
+      list-style-position: inside;
+      padding-left: 0;
+      margin: 10px 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    a {
+      color: #333446;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  <header>
+    <div id="animated-text">Hello, I am Priya Kumari</div>
+  </header>
+
+  <!-- About Me Section -->
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I am a passionate Computer Science student at NIT with a strong interest in web development and software engineering.
+      I enjoy solving problems, building creative web applications, and constantly learning new technologies. 
+      My goal is to contribute to impactful tech projects and grow as a developer.
+    </p>
+  </section>
+
+  <!-- Skills and Interests Section -->
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Node.js, Express.js, MongoDB</li>
+      <li>React.js and REST API development</li>
+      <li>C++ and Data Structures & Algorithms (DSA)</li>
+      <li>Object-Oriented Programming (OOPs)</li>
+      <li>Database Management Systems (DBMS)</li>
+    </ul>
+
+    <h2>Interests</h2>
+    <ol>
+      <li>Web Development</li>
+      <li>Problem Solving and Algorithms</li>
+    </ol>
+  </section>
+
+  <!-- Projects Section -->
+  <section>
+    <h2>Projects</h2>
+
+    <h3>TodoList Webpage</h3>
+    <p>A simple task management application that lets users create, update, and delete tasks with an intuitive interface.</p>
+    <a href="https://github.com/priya132005/TodoList" target="_blank">View Project</a>
+
+    <h3>Rock-Paper-and-Scissor Game</h3>
+    <p>A fun and interactive Rock-Paper-Scissors game built using JavaScript where users can play against the computer.</p>
+    <a href="https://github.com/priya132005/Rock-paper-and-scissor-game" target="_blank">View Project</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section>
+    <h2>Contact Information</h2>
+    <p>Email: priyak.dd22.cs@nitp.ac.in</p>
+    <p>
+      <a href="https://www.linkedin.com/in/priya-kumari-453b93369" target="_blank">LinkedIn</a> |
+      
+    </p>
+  </section>
+
+  
+
+  <!-- JavaScript for animated header text -->
+  <script>
+    const phrases = [
+      "Hello, I am Priya Kumari",
+      "A student",
+      "A web developer",
+      "Love to solve problems"
+    ];
+
+    let index = 0;
+    const animatedText = document.getElementById("animated-text");
+
+    setInterval(() => {
+      index = (index + 1) % phrases.length;
+      animatedText.textContent = phrases[index];
+    }, 1000);
+  </script>
+
+</body>
+</html>

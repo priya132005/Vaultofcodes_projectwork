@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog App</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- SwiperJS CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+</head>
+<body>
+  <header>
+    <div class="logo">🌀 ThinkSphere</div>
+  </header>
+
+  <section class="main-content">
+    <h1 class="heading">Connect to Latest Blogs..</h1>
+
+    <!-- <p class="desc">
+      <strong>Why search here and there?</strong> Everything you need is right here. Connect, explore, and you're ready to go!
+    </p> -->
+
+    <p class="desc">
+      Welcome to <strong>ThinkSphere</strong> – your go-to platform for fresh insights, inspiring stories, and expert takes on technology, startups, and modern living.
+    </p>
+
+    <div class="subscribe-box">
+      <input type="email" placeholder="Enter your email" />
+      <button>Subscribe</button>
+    </div>
+
+    <!-- Swiper Slider -->
+    <div class="topic-slider-container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide topic-slide">
+            <img src="pic/technology.jpg" alt="Technology">
+            <div class="slide-content">
+              <!-- <h3>Technology</h3> -->
+              <p>Stay ahead with the latest tech trends and innovations.</p>
+              <button onclick="filterBlogs('Technology')">Explore Tech</button>
+            </div>
+          </div>
+          <div class="swiper-slide topic-slide">
+            <img src="pic/startup.png" alt="Startup">
+            <div class="slide-content">
+              <!-- <h3>Startups</h3> -->
+              <!-- <p>Discover emerging startups shaping tomorrow's world.</p> -->
+              <button onclick="filterBlogs('Startup')">Explore Startups</button>
+            </div>
+          </div>
+          <div class="swiper-slide topic-slide">
+            <img src="pic/lifestyle.avif" alt="Lifestyle">
+            <div class="slide-content">
+              <!-- <h3>Lifestyle</h3> -->
+              <!-- <p>Tips and stories to enhance your everyday living.</p> -->
+              <button onclick="filterBlogs('Lifestyle')">Explore Lifestyle</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+    <p class="desc">
+      <strong>Why search here and there?</strong> Everything you need is right here. Connect, explore, and you're ready to go!
+    </p>
+    <div class="filters">
+      <button onclick="filterBlogs('All')">All</button>
+      <button onclick="filterBlogs('Technology')">Technology</button>
+      <button onclick="filterBlogs('Startup')">Startup</button>
+      <button onclick="filterBlogs('Lifestyle')">Lifestyle</button>
+    </div>
+
+    <div id="blog-container" class="grid-container">
+      <!-- Blogs will be injected here -->
+    </div>
+
+    <button id="show-more-btn" class="show-more">Show More</button>
+  </section>
+
+  <footer>
+    <p>© 2025 🌀 ThinkSphere. All rights reserved.</p>
+  </footer>
+
+  <!-- SwiperJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- App Script -->
+  <script src="script.js"></script>
+</body>
+</html>

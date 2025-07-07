@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internship Programs</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #edd0a2; 
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      border: 2px solid transparent;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border: 2px solid #A53860;
+      box-shadow: 0 8px 24px rgba(77, 27, 46, 0.5); 
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .card ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .card li {
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #3A0519; 
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #5a0829; 
+    }
+
+    .explore-btn {
+      display: block;
+      width: fit-content;
+      margin: 40px auto 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Web Development Internship Program</h2>
+      <ul>
+        <li>Duration: 1 month/2 months</li>
+        <li>Location: Virtual</li>
+       <li>Stipend: ₹499</li>
+
+        <li>Start date: 01/06/2025</li>
+      </ul>
+      <a href="example.html" class="btn">View Details</a>
+    </div>
+
+    <div class="card">
+      <h2>App Development Internship Program</h2>
+      <ul>
+        <li>Duration: 1 month/2 months</li>
+        <li>Location: Virtual</li>
+       <li>Stipend: ₹499</li>
+
+        <li>Start date: 01/06/2025</li>
+      </ul>
+      <a href="example.html" class="btn">View Details</a>
+    </div>
+
+    <div class="card">
+      <h2>Python Programming Internship Program</h2>
+      <ul>
+        <li>Duration: 1 month/2 months</li>
+        <li>Location: Virtual</li>
+        <li>Stipend: ₹399</li>
+
+        <li>Start date: 01/06/2025</li>
+      </ul>
+      <a href="example.html" class="btn">View Details</a>
+    </div>
+
+    <div class="card">
+      <h2>Java Programming Internship Program</h2>
+      <ul>
+        <li>Duration: 1 month/2 months</li>
+        <li>Location: Virtual</li>
+        <li>Stipend: ₹299</li>
+
+        <li>Start date: 01/06/2025</li>
+      </ul>
+      <a href="example.html" class="btn">View Details</a>
+    </div>
+  </div>
+
+  <a href="example.html" class="btn explore-btn">Explore More...</a>
+</body>
+</html>

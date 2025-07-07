@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipe Book</title>
+  <link rel="stylesheet" href="style1.css" />
+  
+</head>
+<body>
+
+  <header class="main-header">
+    <img src="Images\logo.png" alt="Logo" class="logo" />
+    <h1 class="title">Welcome to My Recipe Book World...</h1>
+  </header>
+
+  <section class="intro" >
+    <p >
+      Explore a delightful world of homemade recipes crafted with love and flavor.
+      From decadent desserts to savory meals, my recipe book is your go-to place for delicious inspiration.
+      Whether you're a kitchen novice or a seasoned chef, there's something here to satisfy every palate.
+    </p>
+  </section>
+
+  <div class="grid" id="recipeGrid">
+    <!-- 4 recipes visible -->
+    <div class="card"><img src="Images\cake1.webp" alt="Chocolate Cake" /><h3>Chocolate Cake</h3><a href="recipe.html?id=1">View Recipe</a></div>
+    <div class="card"><img src="Images\pasta.avif" alt="Creamy Pasta" /><h3>Creamy Pasta</h3><a href="recipe.html?id=2">View Recipe</a></div>
+    <div class="card"><img src="Images\pizza.webp" alt="Cheesy Pizza" /><h3>Cheesy Pizza</h3><a href="recipe.html?id=3">View Recipe</a></div>
+    <div class="card"><img src="Images\burger.avif" alt="Spicy Burger" /><h3>Spicy Burger</h3><a href="recipe.html?id=4">View Recipe</a></div>
+
+    <!-- 16 hidden recipes -->
+    <div class="card hidden"><img src="Images\salad.jpg" alt="Salad" /><h3>Fresh Salad</h3><a href="recipe.html?id=5">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\pancake.jpg" alt="Pancakes" /><h3>Pancakes</h3><a href="recipe.html?id=6">View Recipe</a></div>
+    <div class="card hidden"><img src="Images/soup.jpg" alt="Soup" /><h3>Tomato Soup</h3><a href="recipe.html?id=7">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\curry.webp" alt="Curry" /><h3>Chicken Curry</h3><a href="recipe.html?id=8">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\friedrice.webp" alt="Fried Rice" /><h3>Fried Rice</h3><a href="recipe.html?id=9">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\sandwich.webp" alt="Sandwich" /><h3>Club Sandwich</h3><a href="recipe.html?id=10">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\mac&cheese.jpg" alt="Mac & Cheese" /><h3>Mac & Cheese</h3><a href="recipe.html?id=11">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\Sushi.jpg" alt="Sushi" /><h3>Sushi Rolls</h3><a href="recipe.html?id=12">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\grilledcheese.jpg" alt="Grilled Cheese" /><h3>Grilled Cheese</h3><a href="recipe.html?id=13">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\momo.jpg" alt="Momos" /><h3>Veg Momos</h3><a href="recipe.html?id=14">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\springroll.webp" alt="Spring Rolls" /><h3>Spring Rolls</h3><a href="recipe.html?id=15">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\noddle.jpg" alt="Noodles" /><h3>Hakka Noodles</h3><a href="recipe.html?id=16">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\paneertikki.jpg" alt="Paneer Tikka" /><h3>Paneer Tikka</h3><a href="recipe.html?id=17">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\idli.jpg" alt="Idli Sambar" /><h3>Idli Sambar</h3><a href="recipe.html?id=18">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\biryani.jpg" alt="Biryani" /><h3>Hyderabadi Biryani</h3><a href="recipe.html?id=19">View Recipe</a></div>
+    <div class="card hidden"><img src="Images\lassi.webp" alt="Lassi" /><h3>Sweet Lassi</h3><a href="recipe.html?id=20">View Recipe</a></div>
+  </div>
+
+  <div class="center">
+    <button id="toggleButton" onclick="toggleRecipes()">Show More</button>
+  </div>
+
+  <script>
+    function toggleRecipes() {
+      const hiddenCards = document.querySelectorAll('.card.hidden');
+      const button = document.getElementById('toggleButton');
+      const isShowing = hiddenCards[0].style.display === 'block';
+
+      hiddenCards.forEach(card => {
+        card.style.display = isShowing ? 'none' : 'block';
+      });
+
+      button.textContent = isShowing ? 'Show More' : 'Show Less';
+    }
+
+    // Hide extra cards on load
+    document.querySelectorAll('.card.hidden').forEach(card => card.style.display = 'none');
+  </script>
+
+</body>
+</html>

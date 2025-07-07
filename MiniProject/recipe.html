@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipe Details</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="recipe-container">
+    <div class="recipe-description">
+      Discover delicious recipes crafted with care! Explore easy-to-follow steps, ingredients, and cooking tools to make your favorite meals. Whether you're a beginner or a pro, this guide will help you cook confidently and enjoy every bite.
+    </div>
+    <h1 class="recipe-title" id="title"></h1>
+    <img src="" id="recipeImage" class="recipe-img" alt="Recipe Image" />
+    <div class="info">
+      <span>Prep Time: <span id="prepTime"></span></span>
+      <span>Serves: <span id="serving"></span></span>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSection('ingredients')">Show Ingredients</button>
+    <ul class="ingredients" id="ingredients"></ul>
+
+    <button class="toggle-btn" onclick="toggleSection('steps')">Show Steps</button>
+    <ol class="steps" id="steps"></ol>
+
+    <button class="toggle-btn" onclick="startCooking()">Start Cooking</button>
+    <button class="toggle-btn" onclick="nextStep()">Next</button>
+
+    <!-- ✅ Progress Bar (Positioned properly before timer) -->
+    <div class="progress-bar">
+      <div id="progressBar"></div>
+    </div>
+
+    <!-- ✅ Timer -->
+    <div id="timer-container">
+      Time Left: <span id="timer">--:--</span>
+    </div>
+
+    <button class="toggle-btn" onclick="goBack()">Go Back</button>
+    <button class="toggle-btn" onclick="window.print()">Print Recipe</button>
+  </div>
+<script src="script.js"></script>
+ 
+</body>
+</html>
